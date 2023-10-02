@@ -1,6 +1,6 @@
 # iiitb_riscv_drip_irrigation_system
 
-# project Overview
+# Project Overview
 
 The objective of this project is to design a contactless water level indicator system for automated drip irrigation. Our focus is to implement this innovative solution using a RISC-V processor, a departure from traditional Arduino boards. The primary motivation for this endeavor is to enhance efficiency and precision in the irrigation process, particularly for applications like drip irrigation systems.
 

@@ -8,12 +8,14 @@ The objective of this project is to design a contactless water level indicator s
 
 The project requires very few components and the connection is also very simple. The components are listed below:
 
-Arduino 
+```
+RISCV  
 moisture sensor
 5v relay module 
 6v Mini water pump with small pipe 
 Connecting wires
-5v battery 
+5v battery
+```
 
 # Block Diagram
 

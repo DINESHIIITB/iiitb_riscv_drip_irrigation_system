@@ -36,7 +36,7 @@ int main()  {
     
         while(1) {
         // Read sensor data into x10
-	asm volatile(
+	asm (
             "and %0, x30, 1"
             : "=r"(sensor_value)
         );

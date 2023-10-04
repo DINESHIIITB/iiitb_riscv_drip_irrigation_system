@@ -129,6 +129,7 @@ Disassembly of section .text:
 
 Number of different instructions: 11
 List of unique instructions:
+```
 and
 li
 sw
@@ -140,6 +141,7 @@ j
 ori
 ret
 bne
+```
 
 # Word of Thanks
 

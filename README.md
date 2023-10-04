@@ -17,6 +17,7 @@ Connecting wires
 
 # Block Diagram
 
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/f14f4bd1-e05b-4c84-9bdc-aab5ff83e646)
 
 
 # Code
@@ -137,4 +138,12 @@ bne
 # Word of Thanks
 
 I sciencerly thank Mr. Kunal Gosh(Founder/VSD) for helping me out to complete this flow smoothly.
+
+## Reference
+
+* https://github.com/The-OpenROAD-Project/OpenSTA.git
+* https://github.com/kunalg123
+* https://www.vsdiat.com
+* https://github.com/SakethGajawada/RISCV-GNU
+
 

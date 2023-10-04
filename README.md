@@ -35,7 +35,7 @@ int main()  {
     
     
         while(1) {
-        // Read sensor data into x10
+        // Read sensor data into x30
 	asm (
             "and %0, x30, 1"
             : "=r"(sensor_value)
@@ -50,9 +50,9 @@ int main()  {
             dummy=0xFFFFFFFD;
             asm(
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
-            "or %0, x30,2"                 // output at 2nd bit , that switches on the motor
+            "or %1, x30,2"                 // output at 2nd bit , that switches on the motor
             :"=r"(dummy)
-            :"r"(*MOTOR_CTRL)
+            :"=r"(*MOTOR_CTRL)
         );
         } 
         else {
@@ -60,9 +60,9 @@ int main()  {
             dummy=0xFFFFFFFD;
             asm(
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
-            "or %0, x30,0"            //// output at 2nd bit , that switches off the motor
+            "or %1, x30,0"            //// output at 2nd bit , that switches off the motor
             :"=r"(dummy)
-            :"r"(*MOTOR_CTRL)
+            :"=r"(*MOTOR_CTRL)
         );
         }
 

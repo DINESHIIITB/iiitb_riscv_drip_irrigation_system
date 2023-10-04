@@ -52,7 +52,7 @@ int main()  {
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
             "or %1, x30,2"                 // output at 2nd bit , that switches on the motor
             :"=r"(dummy)
-            :"=r"(*MOTOR_CTRL)
+            :"r"(*MOTOR_CTRL)
         );
         } 
         else {
@@ -62,7 +62,7 @@ int main()  {
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
             "or %1, x30,0"            //// output at 2nd bit , that switches off the motor
             :"=r"(dummy)
-            :"=r"(*MOTOR_CTRL)
+            :"r"(*MOTOR_CTRL)
         );
         }
 

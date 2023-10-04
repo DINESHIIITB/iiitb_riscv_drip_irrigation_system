@@ -83,6 +83,12 @@ drip_irrigation.o:     file format elf32-littleriscv
 
 Disassembly of section .text:
 
+
+drip_irrigation.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
 00000000 <main>:
    0:	fe010113          	addi	sp,sp,-32
    4:	00812e23          	sw	s0,28(sp)

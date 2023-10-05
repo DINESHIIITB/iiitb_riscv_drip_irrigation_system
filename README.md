@@ -77,10 +77,9 @@ int main()  {
 # Assembly Code
 
 ```
-drip_irrigation.o:     file format elf32-littleriscv
 
 Disassembly of section .text:
-dinesh.o:     file format elf32-littleriscv
+drip_irrigation.o:     file format elf32-littleriscv
 
 
 Disassembly of section .text:
@@ -95,48 +94,47 @@ Disassembly of section .text:
   18:	fef42423          	sw	a5,-24(s0)
   1c:	fe842703          	lw	a4,-24(s0)
   20:	00100793          	li	a5,1
-  24:	02f71263          	bne	a4,a5,48 <.L2>
+  24:	02f71063          	bne	a4,a5,44 <.L2>
   28:	ffd00793          	li	a5,-3
   2c:	fef42223          	sw	a5,-28(s0)
   30:	fe042783          	lw	a5,-32(s0)
-  34:	0007a783          	lw	a5,0(a5)
-  38:	00ff7f33          	and	t5,t5,a5
-  3c:	002f6793          	or	a5,t5,2
-  40:	fef42223          	sw	a5,-28(s0)
-  44:	0200006f          	j	64 <.L3>
+  34:	00ff7f33          	and	t5,t5,a5
+  38:	002f6793          	or	a5,t5,2
+  3c:	fef42223          	sw	a5,-28(s0)
+  40:	01c0006f          	j	5c <.L3>
 
-00000048 <.L2>:
-  48:	ffd00793          	li	a5,-3
-  4c:	fef42223          	sw	a5,-28(s0)
-  50:	fe042783          	lw	a5,-32(s0)
-  54:	0007a783          	lw	a5,0(a5)
-  58:	00ff7f33          	and	t5,t5,a5
-  5c:	000f6793          	or	a5,t5,0
-  60:	fef42223          	sw	a5,-28(s0)
+00000044 <.L2>:
+  44:	ffd00793          	li	a5,-3
+  48:	fef42223          	sw	a5,-28(s0)
+  4c:	fe042783          	lw	a5,-32(s0)
+  50:	00ff7f33          	and	t5,t5,a5
+  54:	000f6793          	or	a5,t5,0
+  58:	fef42223          	sw	a5,-28(s0)
 
-00000064 <.L3>:
-  64:	00000793          	li	a5,0
-  68:	00078513          	mv	a0,a5
-  6c:	01c12403          	lw	s0,28(sp)
-  70:	02010113          	add	sp,sp,32
-  74:	00008067          	ret
+0000005c <.L3>:
+  5c:	00000793          	li	a5,0
+  60:	00078513          	mv	a0,a5
+  64:	01c12403          	lw	s0,28(sp)
+  68:	02010113          	add	sp,sp,32
+  6c:	00008067          	ret
+
+
 
 ```
 
 Number of different instructions: 10
 List of unique instructions:
 ```
-add
-or
-li
 bne
-sw
 and
-j
-lw
 ret
 mv
-
+li
+lw
+j
+or
+sw
+add
 ```
 
 # Word of Thanks

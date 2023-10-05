@@ -460,20 +460,40 @@ Disassembly of section .text:
 
 ```
 
-Number of different instructions: 11
+Number of different instructions: 30
 List of unique instructions:
 ```
-and
-li
-sw
-andi
-mv
-lw
-addi
 j
-ori
+mv
 ret
+lui
 bne
+bltz
+jal
+zext.b
+sll
+and
+beq
+lbu
+auipc
+add
+beqz
+sub
+neg
+or
+sra
+blt
+sb
+bgeu
+sw
+lw
+ecall
+bnez
+bltu
+jalr
+li
+jr
+
 ```
 
 # Word of Thanks

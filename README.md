@@ -36,7 +36,7 @@ int main()  {
     
         while(1) {
         // Read sensor data into x30
-	asm (
+	asm volatile(
             "and %0, x30, 1"
             : "=r"(sensor_value)
         );
@@ -48,21 +48,23 @@ int main()  {
         if (sensor_value == 1) {
             // If moisture is below the threshold, set the motor control register to 1 (motor on)
             dummy=0xFFFFFFFD;
-            asm(
+            asm volatile(
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
-            "or %1, x30,2"                 // output at 2nd bit , that switches on the motor
-            :"=r"(dummy)
-            :"r"(MOTOR_CTRL)
+            "or x30, x30,2"                 // output at 2nd bit , that switches on the motor
+            :
+            :"r"(dummy)
+            :"x30"
         );
         } 
         else {
             // If moisture is above the threshold, set the motor control register to 0 (motor off)
             dummy=0xFFFFFFFD;
-            asm(
+            asm volatile( 
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
-            "or %1, x30,0"            //// output at 2nd bit , that switches off the motor
-            :"=r"(dummy)
-            :"r"(MOTOR_CTRL)
+            "or x30, x30,0"            //// output at 2nd bit , that switches off the motor
+            :
+            :"r"(dummy)
+            :"x30"
         );
         }
 
@@ -70,6 +72,7 @@ int main()  {
 }
 
 }
+
 
 
 ```
@@ -82,41 +85,33 @@ Disassembly of section .text:
 drip_irrigation.o:     file format elf32-littleriscv
 
 
-Disassembly of section .text:
-
-00000000 <main>:
-   0:	fe010113          	add	sp,sp,-32
-   4:	00812e23          	sw	s0,28(sp)
-   8:	02010413          	add	s0,sp,32
-   c:	1f400793          	li	a5,500
-  10:	fef42623          	sw	a5,-20(s0)
-  14:	001f7793          	and	a5,t5,1
-  18:	fef42423          	sw	a5,-24(s0)
-  1c:	fe842703          	lw	a4,-24(s0)
-  20:	00100793          	li	a5,1
-  24:	02f71063          	bne	a4,a5,44 <.L2>
-  28:	ffd00793          	li	a5,-3
-  2c:	fef42223          	sw	a5,-28(s0)
-  30:	fe042783          	lw	a5,-32(s0)
-  34:	00ff7f33          	and	t5,t5,a5
-  38:	002f6793          	or	a5,t5,2
-  3c:	fef42223          	sw	a5,-28(s0)
-  40:	01c0006f          	j	5c <.L3>
-
-00000044 <.L2>:
-  44:	ffd00793          	li	a5,-3
-  48:	fef42223          	sw	a5,-28(s0)
-  4c:	fe042783          	lw	a5,-32(s0)
-  50:	00ff7f33          	and	t5,t5,a5
-  54:	000f6793          	or	a5,t5,0
-  58:	fef42223          	sw	a5,-28(s0)
-
-0000005c <.L3>:
-  5c:	00000793          	li	a5,0
-  60:	00078513          	mv	a0,a5
-  64:	01c12403          	lw	s0,28(sp)
-  68:	02010113          	add	sp,sp,32
-  6c:	00008067          	ret
+00010074 <main>:
+   10074:	fe010113          	add	sp,sp,-32
+   10078:	00812e23          	sw	s0,28(sp)
+   1007c:	02010413          	add	s0,sp,32
+   10080:	1f400793          	li	a5,500
+   10084:	fef42623          	sw	a5,-20(s0)
+   10088:	001f7793          	and	a5,t5,1
+   1008c:	fef42423          	sw	a5,-24(s0)
+   10090:	fe842703          	lw	a4,-24(s0)
+   10094:	00100793          	li	a5,1
+   10098:	00f71e63          	bne	a4,a5,100b4 <main+0x40>
+   1009c:	ffd00793          	li	a5,-3
+   100a0:	fef42223          	sw	a5,-28(s0)
+   100a4:	fe442783          	lw	a5,-28(s0)
+   100a8:	00ff7f33          	and	t5,t5,a5
+   100ac:	002f6f13          	or	t5,t5,2
+   100b0:	0180006f          	j	100c8 <main+0x54>
+   100b4:	ffd00793          	li	a5,-3
+   100b8:	fef42223          	sw	a5,-28(s0)
+   100bc:	fe442783          	lw	a5,-28(s0)
+   100c0:	00ff7f33          	and	t5,t5,a5
+   100c4:	000f6f13          	or	t5,t5,0
+   100c8:	00000793          	li	a5,0
+   100cc:	00078513          	mv	a0,a5
+   100d0:	01c12403          	lw	s0,28(sp)
+   100d4:	02010113          	add	sp,sp,32
+   100d8:	00008067          	ret
 
 
 
@@ -125,16 +120,16 @@ Disassembly of section .text:
 Number of different instructions: 10
 List of unique instructions:
 ```
-bne
-and
+or
+add
+j
+li
 ret
 mv
-li
+and
+bne
 lw
-j
-or
 sw
-add
 ```
 
 # Word of Thanks

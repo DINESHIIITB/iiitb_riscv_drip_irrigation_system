@@ -37,7 +37,7 @@ int main()  {
         while(1) {
         // Read sensor data into x30
 	asm volatile(
-            "and %0, x30, 1"
+            "andi %0, x30, 1"
             : "=r"(sensor_value)
         );
 
@@ -50,7 +50,7 @@ int main()  {
             dummy=0xFFFFFFFD;
             asm volatile(
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
-            "or x30, x30,2"                 // output at 2nd bit , that switches on the motor
+            "ori x30, x30,2"                 // output at 2nd bit , that switches on the motor
             :
             :"r"(dummy)
             :"x30"
@@ -61,7 +61,7 @@ int main()  {
             dummy=0xFFFFFFFD;
             asm volatile( 
             "and x30,x30, %0\n\t"     // Load immediate 1 into x30
-            "or x30, x30,0"            //// output at 2nd bit , that switches off the motor
+            "ori x30, x30,0"            //// output at 2nd bit , that switches off the motor
             :
             :"r"(dummy)
             :"x30"
@@ -81,39 +81,38 @@ int main()  {
 
 ```
 
+out:     file format elf32-littleriscv
+
+
 Disassembly of section .text:
-drip_irrigation.o:     file format elf32-littleriscv
 
-
-00010074 <main>:
-   10074:	fe010113          	add	sp,sp,-32
-   10078:	00812e23          	sw	s0,28(sp)
-   1007c:	02010413          	add	s0,sp,32
-   10080:	1f400793          	li	a5,500
-   10084:	fef42623          	sw	a5,-20(s0)
-   10088:	001f7793          	and	a5,t5,1
-   1008c:	fef42423          	sw	a5,-24(s0)
-   10090:	fe842703          	lw	a4,-24(s0)
-   10094:	00100793          	li	a5,1
-   10098:	00f71e63          	bne	a4,a5,100b4 <main+0x40>
-   1009c:	ffd00793          	li	a5,-3
-   100a0:	fef42223          	sw	a5,-28(s0)
-   100a4:	fe442783          	lw	a5,-28(s0)
-   100a8:	00ff7f33          	and	t5,t5,a5
-   100ac:	002f6f13          	or	t5,t5,2
-   100b0:	0180006f          	j	100c8 <main+0x54>
-   100b4:	ffd00793          	li	a5,-3
-   100b8:	fef42223          	sw	a5,-28(s0)
-   100bc:	fe442783          	lw	a5,-28(s0)
-   100c0:	00ff7f33          	and	t5,t5,a5
-   100c4:	000f6f13          	or	t5,t5,0
-   100c8:	00000793          	li	a5,0
-   100cc:	00078513          	mv	a0,a5
-   100d0:	01c12403          	lw	s0,28(sp)
-   100d4:	02010113          	add	sp,sp,32
-   100d8:	00008067          	ret
-
-
+00010054 <main>:
+   10054:	fe010113          	addi	sp,sp,-32
+   10058:	00812e23          	sw	s0,28(sp)
+   1005c:	02010413          	addi	s0,sp,32
+   10060:	1f400793          	li	a5,500
+   10064:	fef42623          	sw	a5,-20(s0)
+   10068:	001f7793          	andi	a5,t5,1
+   1006c:	fef42423          	sw	a5,-24(s0)
+   10070:	fe842703          	lw	a4,-24(s0)
+   10074:	00100793          	li	a5,1
+   10078:	00f71e63          	bne	a4,a5,10094 <main+0x40>
+   1007c:	ffd00793          	li	a5,-3
+   10080:	fef42223          	sw	a5,-28(s0)
+   10084:	fe442783          	lw	a5,-28(s0)
+   10088:	00ff7f33          	and	t5,t5,a5
+   1008c:	002f6f13          	ori	t5,t5,2
+   10090:	0180006f          	j	100a8 <main+0x54>
+   10094:	ffd00793          	li	a5,-3
+   10098:	fef42223          	sw	a5,-28(s0)
+   1009c:	fe442783          	lw	a5,-28(s0)
+   100a0:	00ff7f33          	and	t5,t5,a5
+   100a4:	000f6f13          	ori	t5,t5,0
+   100a8:	00000793          	li	a5,0
+   100ac:	00078513          	mv	a0,a5
+   100b0:	01c12403          	lw	s0,28(sp)
+   100b4:	02010113          	addi	sp,sp,32
+   100b8:	00008067          	ret
 
 ```
 

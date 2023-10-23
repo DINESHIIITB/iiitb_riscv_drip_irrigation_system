@@ -119,13 +119,13 @@ Disassembly of section .text:
 Number of different instructions: 10
 List of unique instructions:
 ```
-or
-add
+ori
+addi
 j
 li
 ret
 mv
-and
+andi
 bne
 lw
 sw

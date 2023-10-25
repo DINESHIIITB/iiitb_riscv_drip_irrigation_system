@@ -156,19 +156,21 @@ Disassembly of section .text:
 
 ```
 
-Number of different instructions: 10
+Number of different instructions: 11
 List of unique instructions:
 ```
-ori
-addi
-j
-li
-ret
-mv
-andi
-bne
-lw
 sw
+bne
+and
+li
+or
+addi
+andi
+j
+lw
+ori
+mv
+
 ```
 
 

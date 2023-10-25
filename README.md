@@ -118,39 +118,41 @@ return 0;
 # Assembly Code
 
 ```
-
 out:     file format elf32-littleriscv
 
 
 Disassembly of section .text:
 
 00010054 <main>:
-   10054:	fe010113          	addi	sp,sp,-32
-   10058:	00812e23          	sw	s0,28(sp)
-   1005c:	02010413          	addi	s0,sp,32
-   10060:	1f400793          	li	a5,500
-   10064:	fef42623          	sw	a5,-20(s0)
+   10054:	fd010113          	addi	sp,sp,-48
+   10058:	02812623          	sw	s0,44(sp)
+   1005c:	03010413          	addi	s0,sp,48
+   10060:	fec42783          	lw	a5,-20(s0)
+   10064:	00ff6f33          	or	t5,t5,a5
    10068:	001f7793          	andi	a5,t5,1
    1006c:	fef42423          	sw	a5,-24(s0)
-   10070:	fe842703          	lw	a4,-24(s0)
+   10070:	fec42703          	lw	a4,-20(s0)
    10074:	00100793          	li	a5,1
-   10078:	00f71e63          	bne	a4,a5,10094 <main+0x40>
+   10078:	02f71663          	bne	a4,a5,100a4 <main+0x50>
    1007c:	ffd00793          	li	a5,-3
    10080:	fef42223          	sw	a5,-28(s0)
-   10084:	fe442783          	lw	a5,-28(s0)
-   10088:	00ff7f33          	and	t5,t5,a5
-   1008c:	002f6f13          	ori	t5,t5,2
-   10090:	0180006f          	j	100a8 <main+0x54>
-   10094:	ffd00793          	li	a5,-3
-   10098:	fef42223          	sw	a5,-28(s0)
-   1009c:	fe442783          	lw	a5,-28(s0)
-   100a0:	00ff7f33          	and	t5,t5,a5
-   100a4:	000f6f13          	ori	t5,t5,0
-   100a8:	00000793          	li	a5,0
-   100ac:	00078513          	mv	a0,a5
-   100b0:	01c12403          	lw	s0,28(sp)
-   100b4:	02010113          	addi	sp,sp,32
-   100b8:	00008067          	ret
+   10084:	00100793          	li	a5,1
+   10088:	fef42023          	sw	a5,-32(s0)
+   1008c:	fe442783          	lw	a5,-28(s0)
+   10090:	00ff7f33          	and	t5,t5,a5
+   10094:	002f6f13          	ori	t5,t5,2
+   10098:	000f0793          	mv	a5,t5
+   1009c:	fcf42e23          	sw	a5,-36(s0)
+   100a0:	fc1ff06f          	j	10060 <main+0xc>
+   100a4:	ffd00793          	li	a5,-3
+   100a8:	fef42223          	sw	a5,-28(s0)
+   100ac:	fe042023          	sw	zero,-32(s0)
+   100b0:	fe442783          	lw	a5,-28(s0)
+   100b4:	00ff7f33          	and	t5,t5,a5
+   100b8:	000f6f13          	ori	t5,t5,0
+   100bc:	000f0793          	mv	a5,t5
+   100c0:	fcf42c23          	sw	a5,-40(s0)
+   100c4:	f9dff06f          	j	10060 <main+0xc>
 
 ```
 
@@ -174,6 +176,10 @@ sw
 
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/ae995d15-ed25-44b9-8121-497b6129348a)
+
+### spike 
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/88341712-f69e-4ac9-acaa-14d096b5722d)
 
 
 # Word of Thanks

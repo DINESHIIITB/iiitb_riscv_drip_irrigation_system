@@ -32,7 +32,6 @@ int main()  {
     int sensor_value;
     int motor;
     int dummy;
-    int i;
     int sensor_ip;
     int test,test1;
     

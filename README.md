@@ -177,7 +177,16 @@ mv
 
 
 
-### spike 
+### Spike Simulation
+
+The motor should be turned on when the moisture sensor input is equal to 1. The motor should be turned off when the moisture sensor input is equal to 0. Based on the results from spike simulation, this behavior is as expected
+
+commands
+```
+ riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o out d.c
+ spike pk out
+
+```
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/88341712-f69e-4ac9-acaa-14d096b5722d)
 

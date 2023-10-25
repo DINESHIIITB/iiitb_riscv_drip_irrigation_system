@@ -33,7 +33,7 @@ int main()  {
     int motor;
     int dummy;
     int i;
-    int rain_sensor_ip;
+    int sensor_ip;
     int test,test1;
     
     
@@ -50,7 +50,7 @@ int main()  {
 		asm volatile(
 		"or x30, x30, %1\n\t"
 		"andi %0, x30, 0x01\n\t"
-		: "=r" (rain_sensor_ip)
+		: "=r" (sensor_ip)
 		: "r" (sensor_value)
 		: "x30"
 		);

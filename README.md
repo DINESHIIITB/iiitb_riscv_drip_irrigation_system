@@ -188,7 +188,19 @@ commands
 
 ```
 
+
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/88341712-f69e-4ac9-acaa-14d096b5722d)
+
+
+### Functional simulation
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/8a2e63b9-6c9c-40dd-9eb3-6eddb7fd824d)
+
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/9fd7547c-2719-4423-80e0-bc7812d90242)
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/fbbdc587-29c0-4c8c-8e7f-c66fa1f1268a)
+
 
 
 # Word of Thanks

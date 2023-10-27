@@ -47,11 +47,10 @@ int main()  {
 			*/
 
 		asm volatile(
-		"or x30, x30, %1\n\t"
 		"andi %0, x30, 0x01\n\t"
-		: "=r" (sensor_ip)
-		: "r" (sensor_value)
-		: "x30"
+		: "=r" (sesensor_value)
+		:
+		: 
 		);
 	
 
@@ -117,6 +116,7 @@ return 0;
 # Assembly Code
 
 ```
+
 out:     file format elf32-littleriscv
 
 
@@ -126,43 +126,39 @@ Disassembly of section .text:
    10054:	fd010113          	addi	sp,sp,-48
    10058:	02812623          	sw	s0,44(sp)
    1005c:	03010413          	addi	s0,sp,48
-   10060:	fec42783          	lw	a5,-20(s0)
-   10064:	00ff6f33          	or	t5,t5,a5
-   10068:	001f7793          	andi	a5,t5,1
-   1006c:	fef42423          	sw	a5,-24(s0)
-   10070:	fec42703          	lw	a4,-20(s0)
-   10074:	00100793          	li	a5,1
-   10078:	02f71663          	bne	a4,a5,100a4 <main+0x50>
-   1007c:	ffd00793          	li	a5,-3
+   10060:	001f7793          	andi	a5,t5,1
+   10064:	fef42623          	sw	a5,-20(s0)
+   10068:	fec42703          	lw	a4,-20(s0)
+   1006c:	00100793          	li	a5,1
+   10070:	02f71663          	bne	a4,a5,1009c <main+0x48>
+   10074:	ffd00793          	li	a5,-3
+   10078:	fef42423          	sw	a5,-24(s0)
+   1007c:	00100793          	li	a5,1
    10080:	fef42223          	sw	a5,-28(s0)
-   10084:	00100793          	li	a5,1
-   10088:	fef42023          	sw	a5,-32(s0)
-   1008c:	fe442783          	lw	a5,-28(s0)
-   10090:	00ff7f33          	and	t5,t5,a5
-   10094:	002f6f13          	ori	t5,t5,2
-   10098:	000f0793          	mv	a5,t5
-   1009c:	fcf42e23          	sw	a5,-36(s0)
-   100a0:	fc1ff06f          	j	10060 <main+0xc>
-   100a4:	ffd00793          	li	a5,-3
-   100a8:	fef42223          	sw	a5,-28(s0)
-   100ac:	fe042023          	sw	zero,-32(s0)
-   100b0:	fe442783          	lw	a5,-28(s0)
-   100b4:	00ff7f33          	and	t5,t5,a5
-   100b8:	000f6f13          	ori	t5,t5,0
-   100bc:	000f0793          	mv	a5,t5
-   100c0:	fcf42c23          	sw	a5,-40(s0)
-   100c4:	f9dff06f          	j	10060 <main+0xc>
-
+   10084:	fe842783          	lw	a5,-24(s0)
+   10088:	00ff7f33          	and	t5,t5,a5
+   1008c:	002f6f13          	ori	t5,t5,2
+   10090:	000f0793          	mv	a5,t5
+   10094:	fef42023          	sw	a5,-32(s0)
+   10098:	fc9ff06f          	j	10060 <main+0xc>
+   1009c:	ffd00793          	li	a5,-3
+   100a0:	fef42423          	sw	a5,-24(s0)
+   100a4:	fe042223          	sw	zero,-28(s0)
+   100a8:	fe842783          	lw	a5,-24(s0)
+   100ac:	00ff7f33          	and	t5,t5,a5
+   100b0:	000f6f13          	ori	t5,t5,0
+   100b4:	000f0793          	mv	a5,t5
+   100b8:	fcf42e23          	sw	a5,-36(s0)
+   100bc:	fa5ff06f          	j	10060 <main+0xc>
 ```
 
-Number of different instructions: 11
+Number of different instructions: 10
 List of unique instructions:
 ```
 sw
 bne
 and
 li
-or
 addi
 andi
 j

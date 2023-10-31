@@ -220,6 +220,16 @@ iverilog -o test synth_processor_test.v testbench.v sky130_sram_1kbyte_1rw1r_32x
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/ecccb444-7d79-4d52-a9fd-1176117a5463)
 
 
+### wrapper module after netlist created
+
+```
+show wrapper
+```
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/1be94917-691d-4aae-8603-e26ee64a6d6c)
+
+
+
 
 
 # Word of Thanks

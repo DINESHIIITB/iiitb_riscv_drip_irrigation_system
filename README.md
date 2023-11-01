@@ -198,6 +198,15 @@ commands
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/fbbdc587-29c0-4c8c-8e7f-c66fa1f1268a)
 
 
+### Instruction verification
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/acdadb8b-6161-44fa-b5ce-f58c90736ee7)
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/08ec655a-09d6-4846-a8e3-7127f011a1cc)
+
+
+
+
 ### Gate Level Simulation :
 
 ```

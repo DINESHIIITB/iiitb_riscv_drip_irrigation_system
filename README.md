@@ -198,9 +198,20 @@ commands
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/fbbdc587-29c0-4c8c-8e7f-c66fa1f1268a)
 
 
-### Instruction verification
+### output
+
+In the below figure when ID_instruction is being fef42423 the output is read.The instruction sw a5, -24(s0) stores the value in register a5 to a specific memory location. 
+
+      10078:	fef42423          	sw	a5,-24(s0)
+
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/acdadb8b-6161-44fa-b5ce-f58c90736ee7)
+
+
+ output value is read at the instruction "fe842783." This instruction loads the value from memory at the address located at -24(sp) and stores it in register a5. 
+
+ 10084: fe842783      lw a5, -24(sp)
+
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/08ec655a-09d6-4846-a8e3-7127f011a1cc)
 

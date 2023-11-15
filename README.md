@@ -275,6 +275,9 @@ R
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/798ef051-1b12-4e26-abe6-5a5b07b02dc9)
 
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/57928805-f803-4d05-b29e-579185ca5e6e)
+
+
 
 # Word of Thanks
 

@@ -270,6 +270,9 @@ p
 
 
 R
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/29fe6742-691b-4f5e-bebd-1a295903a664)
+
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/798ef051-1b12-4e26-abe6-5a5b07b02dc9)
 
 

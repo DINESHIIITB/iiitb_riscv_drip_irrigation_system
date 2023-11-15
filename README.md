@@ -260,6 +260,19 @@ Magic: Magic is a VLSI layout tool used for physical design, including placement
 
 OpenLane integrates these tools and scripts into a cohesive automated flow, making it easier for designers to go from RTL description of the digital circuit to the final layout suitable for manufacturing. The framework is designed to be extensible and customizable, allowing users to adapt it to their specific design needs. It is particularly popular in the open-source hardware community, where it enables collaborative ASIC development.
 
+### steps to run design:
+
+The commands to prepare the design and overwite in a existing run folder the reports and results along with the command to include the lef files is given below:
+
+sed -i's/max_transition   :0.04/max_transition   :0.75'*/*.lib
+
+make mount
+%./flow.tcl -interactive
+% package require openlane 0.9
+% prep -design project -verbose 99
+
+
+
 PHYSICAL DESIGN
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/deb7db69-adcc-4924-be90-448d7058d77d)

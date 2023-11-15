@@ -251,21 +251,12 @@ show wrapper
 
 OpenLane is an open-source framework designed to automate the entire digital integrated circuit (IC) design process, from Register-Transfer Level (RTL) to Graphics Data System II (GDSII). It leverages various open-source tools and custom scripts to facilitate the implementation of Application-Specific Integrated Circuits (ASICs). Here's a brief overview of the key components:
 
-    OpenROAD: OpenROAD is a project that focuses on optimizing the RTL-to-GDSII design flow. It includes tools for floorplanning, placement, and detailed routing.
+OpenROAD: OpenROAD is a project that focuses on optimizing the RTL-to-GDSII design flow. It includes tools for floorplanning, placement, and detailed routing.
 
-    Yosys: Yosys is a synthesis tool that translates RTL code into a logical netlist. It is widely used for RTL synthesis and formal verification.
+Yosys: Yosys is a synthesis tool that translates RTL code into a logical netlist. It is widely used for RTL synthesis and formal verification.
 
-    Magic: Magic is a VLSI layout tool used for physical design, including placement and routing. It allows designers to view and manipulate the layout of transistors and interconnections.
+Magic: Magic is a VLSI layout tool used for physical design, including placement and routing. It allows designers to view and manipulate the layout of transistors and interconnections.
 
-    Netgen: Netgen is a tool for performing digital static timing analysis. It analyzes the timing characteristics of a digital circuit to ensure that the design meets the specified timing constraints.
-
-    CVC: CVC (Consistency Verification and Correction) is a tool used for consistency checking in the design process. It helps identify and correct inconsistencies in the design.
-
-    SPEF-Extractor: SPEF (Standard Parasitic Exchange Format) is a standard file format used to represent parasitic information in an IC design. The SPEF-Extractor extracts parasitic information from the layout.
-
-    CU-GR: CU-GR stands for Clock Tree Synthesis (CTS) and Global Routing. It deals with the synthesis of an optimal clock distribution network and the global routing of signals in the design.
-
-    Klayout: Klayout is a viewer and editor for the layout data of integrated circuits. It allows designers to visualize and edit GDSII layout files.
 
 OpenLane integrates these tools and scripts into a cohesive automated flow, making it easier for designers to go from RTL description of the digital circuit to the final layout suitable for manufacturing. The framework is designed to be extensible and customizable, allowing users to adapt it to their specific design needs. It is particularly popular in the open-source hardware community, where it enables collaborative ASIC development.
 

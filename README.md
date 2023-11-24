@@ -358,6 +358,19 @@ run_cts
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/d19fa19a-8b9c-4505-92cd-73ec4be18fa2)
 
+### Routing
+
+Global Routing:
+
+The routing region is partitioned into rectangular grids, which are represented as coarse 3D routes using the Fastroute tool.This stage provides an initial, high-level connection between standard cells, establishing a broad layout for the routing.
+
+Detailed Routing:
+
+Finer grids and routing guides are used in this stage to implement the physical wiring with greater precision. TritonRoute is the primary tool for detailed routing.Features of TritonRoute include honoring pre-processed route guides, assuming that each net satisfies inter-guide connectivity.TritonRoute utilizes a Mixed-Integer Linear Programming (MILP) based panel routing scheme, allowing for efficient optimization in determining the best paths.The routing process employs an intra-layer parallel and inter-layer sequential framework, optimizing the connections within individual metal layers and coordinating sequential connections across different layers.
+
+```
+% run_routing
+```
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/f8d998e9-4675-4600-9136-38a93c5416b7)
  

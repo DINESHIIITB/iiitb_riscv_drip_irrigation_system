@@ -310,6 +310,33 @@ FP_CORE_VMETAL and FP_CORE_HMETAL: These specify the vertical and horizontal met
 ```
 % run_floorplan
 ```
+### Placement
+
+Global Placement:
+
+This stage aims to find an optimal position for all cells, even if the placement is not yet legal, and cells may overlap. The optimization focuses on reducing the half parameter wire length, improving overall wirelength and signal delay.
+
+Detailed Placement:
+
+Following global placement, the detailed placement stage adjusts the positions of cells to legalize them, ensuring that the placement adheres to the design rules and constraints. This step refines the initial placement obtained during the global placement stage.\
+
+```
+run_placement
+```
+
+### CTS
+
+
+
+Clock tree synteshsis is used to create the clock distribution network that is used to deliver the clock to all sequential elements. The main goal is to create a network with minimal skew across the chip. H-trees are a common network topology that is used to achieve this goal.
+
+The purpose of building a clock tree is enable the clock input to reach every element and to ensure a zero clock skew. H-tree is a common methodology followed in CTS.
+
+Run the following command to perform CTS
+```
+run_cts
+```
+
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/85069b58-0916-480c-bcc7-8127a2406f94)
 
@@ -332,7 +359,21 @@ f
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/fd03abdd-2162-4740-bcf1-6de8969ffec1)
 
+### Die Area
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/34226fd7-ff7e-47ff-8db9-9f801e27ab13)
+
+### Core Area
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/8d573123-9068-4aa1-9c9a-3677a1008613)
+
+
 p
+
+Post placement: the design can be viewed on magic within results/placement directory. Run the follwing command in that directory:
+```
+magic -T /home/dinesh/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+```
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/461bd9d8-8d0a-4013-89e7-0ed9919d35c8)
 

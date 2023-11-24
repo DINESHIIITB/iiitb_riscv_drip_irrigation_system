@@ -294,8 +294,6 @@ PHYSICAL DESIGN
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/deb7db69-adcc-4924-be90-448d7058d77d)
 
 
-![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/739303b1-0c71-40fd-8480-e8f700879979)
-
 
 ### FLOOR PLAN
 
@@ -314,6 +312,9 @@ FP_CORE_VMETAL and FP_CORE_HMETAL: These specify the vertical and horizontal met
 ```
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/85069b58-0916-480c-bcc7-8127a2406f94)
+
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/739303b1-0c71-40fd-8480-e8f700879979)
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/addf2ac4-a503-4e45-a78b-5665a7ca4ff2)
 

@@ -275,15 +275,15 @@ make mount
 
 GTECH Mapping (Generic Technology Mapping):
 
-    Input: The starting point for logic synthesis is the Register Transfer Level (RTL) netlist, which is a high-level abstraction of the digital design described in a Hardware Description Language (HDL) like Verilog or VHDL.
-    Process: GTECH Mapping involves mapping the RTL netlist to a set of generic gates. These generic gates are not specific to any particular technology or manufacturing process. Instead, they represent a more abstract view of the logic functions described in the RTL.
-    Objective: The goal of GTECH Mapping is to create a generic representation of the design that can be further optimized and refined. Abstract Intermediate Graphs for Electronic Realization (AIGERs) and other topologies may be used during logical optimization to enhance the efficiency of the design.
+Input: The starting point for logic synthesis is the Register Transfer Level (RTL) netlist, which is a high-level abstraction of the digital design described in a Hardware Description Language (HDL) like Verilog or VHDL.
+Process: GTECH Mapping involves mapping the RTL netlist to a set of generic gates. These generic gates are not specific to any particular technology or manufacturing process. Instead, they represent a more abstract view of the logic functions described in the RTL.
+Objective: The goal of GTECH Mapping is to create a generic representation of the design that can be further optimized and refined. Abstract Intermediate Graphs for Electronic Realization (AIGERs) and other topologies may be used during logical optimization to enhance the efficiency of the design.
 
 Technology Mapping:
 
-    Input: The output of the GTECH Mapping phase, which is a more abstract and optimized netlist, serves as the input for the Technology Mapping step.
-    Process: Technology Mapping involves mapping the post-optimized GTECH netlist to standard cells that are part of a specific Process Design Kit (PDK). Standard cells are predefined, characterized, and optimized logic cells that are available in the technology library associated with a particular semiconductor manufacturing process.
-    Objective: The aim of Technology Mapping is to translate the generic, optimized netlist into a form that is compatible with the available technology and can be implemented using the standard cells provided by the process technology. This step is crucial for ensuring that the final design meets the physical constraints and performance requirements of the target technology.
+Input: The output of the GTECH Mapping phase, which is a more abstract and optimized netlist, serves as the input for the Technology Mapping step.
+Process: Technology Mapping involves mapping the post-optimized GTECH netlist to standard cells that are part of a specific Process Design Kit (PDK). Standard cells are predefined, characterized, and optimized logic cells that are available in the technology library associated with a particular semiconductor manufacturing process.
+Objective: The aim of Technology Mapping is to translate the generic, optimized netlist into a form that is compatible with the available technology and can be implemented using the standard cells provided by the process technology. This step is crucial for ensuring that the final design meets the physical constraints and performance requirements of the target technology.
 
 ```
 run_synthesis

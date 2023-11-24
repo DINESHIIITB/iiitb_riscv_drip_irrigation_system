@@ -271,11 +271,33 @@ make mount
 % package require openlane 0.9
 % prep -design project -verbose 99
 
+### Synthesis
 
+GTECH Mapping (Generic Technology Mapping):
+
+    Input: The starting point for logic synthesis is the Register Transfer Level (RTL) netlist, which is a high-level abstraction of the digital design described in a Hardware Description Language (HDL) like Verilog or VHDL.
+    Process: GTECH Mapping involves mapping the RTL netlist to a set of generic gates. These generic gates are not specific to any particular technology or manufacturing process. Instead, they represent a more abstract view of the logic functions described in the RTL.
+    Objective: The goal of GTECH Mapping is to create a generic representation of the design that can be further optimized and refined. Abstract Intermediate Graphs for Electronic Realization (AIGERs) and other topologies may be used during logical optimization to enhance the efficiency of the design.
+
+Technology Mapping:
+
+    Input: The output of the GTECH Mapping phase, which is a more abstract and optimized netlist, serves as the input for the Technology Mapping step.
+    Process: Technology Mapping involves mapping the post-optimized GTECH netlist to standard cells that are part of a specific Process Design Kit (PDK). Standard cells are predefined, characterized, and optimized logic cells that are available in the technology library associated with a particular semiconductor manufacturing process.
+    Objective: The aim of Technology Mapping is to translate the generic, optimized netlist into a form that is compatible with the available technology and can be implemented using the standard cells provided by the process technology. This step is crucial for ensuring that the final design meets the physical constraints and performance requirements of the target technology.
+
+```
+run_synthesis
+```
 
 PHYSICAL DESIGN
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/deb7db69-adcc-4924-be90-448d7058d77d)
+
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/739303b1-0c71-40fd-8480-e8f700879979)
+
+
+### FLOOR PLAN
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/85069b58-0916-480c-bcc7-8127a2406f94)
 

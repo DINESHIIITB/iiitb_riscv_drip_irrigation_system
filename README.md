@@ -321,8 +321,12 @@ FP_CORE_VMETAL and FP_CORE_HMETAL: These specify the vertical and horizontal met
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/f8d998e9-4675-4600-9136-38a93c5416b7)
  
 
+After running the floorplan, a .def file is generated within the results/floorplan directory. The DEF (Design Exchange Format) file typically contains information about the placement of components, power rings, and other floorplan-related details.
 
-
+The command provided is rewrite. However, the typical command to start Magic and load a layout file is magic. If you are already in the results/floorplan directory, you might use:
+```
+magic -T /home/dinesh/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+```
 
 f
 

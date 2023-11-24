@@ -407,6 +407,22 @@ magic -T /home/dinesh/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235
 
 R
 
+In routing stage
+
+Routing options can be configured in the config.tcl file, allowing for optimizations and the selection of different TritonRoute engine versions. It's important to note that there is a tradeoff between achieving an optimized route and the runtime required for routing.
+
+Ensure that the CURRENT_DEF is set to pdn.def for the routing stage. Two routing engines are employed for the different stages:
+
+Global Routing:
+Handled by the Fast Route engine, which generates initial routing guides to establish a coarse layout.
+
+Detailed Routing:
+Utilizes the Triton Route engine, building upon the global route to implement fine-grained wiring with strategies and optimizations for finding the best paths to connect the pins.
+
+```
+magic -T /home/dinesh/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235e4ace1eb6d419/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read wrapper.def &
+```
+
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/29fe6742-691b-4f5e-bebd-1a295903a664)
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/798ef051-1b12-4e26-abe6-5a5b07b02dc9)

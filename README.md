@@ -299,6 +299,20 @@ PHYSICAL DESIGN
 
 ### FLOOR PLAN
 
+FP_CORE_UTIL: Specifies the floorplan core utilization, indicating how much of the chip's core area is utilized by the design.
+
+FP_ASPECT_RATIO: Defines the aspect ratio of the floorplan, which is the ratio of the width to the height.
+
+FP_CORE_MARGIN: Represents the margin area between the core (where components are placed) and the die boundary.
+
+FP_IO_MODE: This switch defines the pin configurations. If set to 1, it indicates equidistant pin configurations; if set to 0, it indicates non-equidistant pin configurations.
+
+FP_CORE_VMETAL and FP_CORE_HMETAL: These specify the vertical and horizontal metal layers, respectively, used in the floorplan. The note suggests that the values specified in the file are usually one less than those used in the command.
+
+```
+% run_floorplan
+```
+
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/85069b58-0916-480c-bcc7-8127a2406f94)
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/addf2ac4-a503-4e45-a78b-5665a7ca4ff2)

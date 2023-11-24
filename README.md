@@ -336,6 +336,9 @@ Run the following command to perform CTS
 ```
 run_cts
 ```
+### Timing  reports
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/a1d5ebe9-c5d8-46c2-a9ac-f883a4a68dce)
 
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/85069b58-0916-480c-bcc7-8127a2406f94)

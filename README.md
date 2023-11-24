@@ -345,6 +345,18 @@ run_cts
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/a1d5ebe9-c5d8-46c2-a9ac-f883a4a68dce)
 
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/becd6ee5-af2d-4734-9031-ec3cd4b0600c)
+
+### Area
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/4ffe3f9f-bbba-439a-a32b-23d31a3efaea)
+
+### Skew report
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/4e9d0ad6-0b4b-4b0f-aa0b-3281363d1839)
+
+### Power report
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/d19fa19a-8b9c-4505-92cd-73ec4be18fa2)
 
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/f8d998e9-4675-4600-9136-38a93c5416b7)

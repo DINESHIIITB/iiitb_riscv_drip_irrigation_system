@@ -293,6 +293,11 @@ PHYSICAL DESIGN
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/deb7db69-adcc-4924-be90-448d7058d77d)
 
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/85069b58-0916-480c-bcc7-8127a2406f94)
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/739303b1-0c71-40fd-8480-e8f700879979)
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/addf2ac4-a503-4e45-a78b-5665a7ca4ff2)
 
 
 ### FLOOR PLAN
@@ -341,12 +346,6 @@ run_cts
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/a1d5ebe9-c5d8-46c2-a9ac-f883a4a68dce)
 
 
-![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/85069b58-0916-480c-bcc7-8127a2406f94)
-
-
-![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/739303b1-0c71-40fd-8480-e8f700879979)
-
-![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/addf2ac4-a503-4e45-a78b-5665a7ca4ff2)
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/f8d998e9-4675-4600-9136-38a93c5416b7)
  

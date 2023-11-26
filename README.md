@@ -395,7 +395,7 @@ f
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/8d573123-9068-4aa1-9c9a-3677a1008613)
 
 
-p
+### Placement
 
 Post placement: the design can be viewed on magic within results/placement directory. Run the follwing command in that directory:
 ```
@@ -405,7 +405,7 @@ magic -T /home/dinesh/.volare/volare/sky130/versions/1341f54f5ce0c4955326297f235
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/461bd9d8-8d0a-4013-89e7-0ed9919d35c8)
 
 
-R
+### Routing
 
 In routing stage
 
@@ -432,6 +432,18 @@ here drc violations are zero
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/bdc8bd56-2f13-480e-8441-9db8268c0cd8)
 
 
+### post routing timing reports
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/895ed6a7-1772-4ef2-a674-f832db9f18a9)
+
+
+### post routing Area reports
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/6e9ae2e6-aa69-47e1-9fc8-29036e8be715)
+
+### post routing power reports
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/aa444d72-178a-4642-b12b-039cbb8262f5)
 
 # Word of Thanks
 

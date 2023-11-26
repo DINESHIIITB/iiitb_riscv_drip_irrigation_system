@@ -445,6 +445,11 @@ here drc violations are zero
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/aa444d72-178a-4642-b12b-039cbb8262f5)
 
+### DRC Violations
+
+![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/ab3f7148-aa34-4927-bf86-747fd44641fc)
+
+
 # Word of Thanks
 
 I sciencerly thank Mr. Kunal Gosh(Founder/VSD) for helping me out to complete this flow smoothly.

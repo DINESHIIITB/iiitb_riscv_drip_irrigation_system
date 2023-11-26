@@ -449,6 +449,23 @@ here drc violations are zero
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/ab3f7148-aa34-4927-bf86-747fd44641fc)
 
+### Open Lane Flow
+
+cd Desktop/OpenLane/ 
+
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design project
+run_synthesis
+run_floorplan
+run_placement
+run_cts
+gen_pdn
+run_routing
+run_magic
+run_magic_spice_export
+run_magic_drc
+run_antenna_check
 
 # Word of Thanks
 

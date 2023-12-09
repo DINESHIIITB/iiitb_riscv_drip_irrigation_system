@@ -371,6 +371,28 @@ Finer grids and routing guides are used in this stage to implement the physical 
 ```
 % run_routing
 ```
+BY running magic :
+
+Open Layout in Magic:
+        Launch the Magic tool.
+        Open the layout file of your ASIC design.
+
+Set Up DRC Rules:
+        Define the design rules that you want to check. These rules specify constraints that your layout must adhere to.
+
+Specify Technology File:
+        Ensure that you have loaded the correct technology file that corresponds to the process technology you are using for your ASIC.
+
+Run DRC:
+        Execute the DRC command or use the graphical interface to initiate the Design Rule Check.
+        The tool will analyze your layout based on the specified rules and report any violations.
+
+Review and Correct Violations:
+        Examine the DRC report to identify rule violations.
+        Make necessary adjustments to the layout to correct any violations.
+
+Iterate:
+        Repeat the DRC process iteratively until your layout satisfies all design rules.
 
 ![image](https://github.com/DINESHIIITB/iiitb_riscv_drip_irrigation_system/assets/140998565/f8d998e9-4675-4600-9136-38a93c5416b7)
  
